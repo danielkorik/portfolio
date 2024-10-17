@@ -1,0 +1,73 @@
+/* Resume Page Styles */
+.resume-section {
+    padding: 50px;
+    background-color: #121212; /* Match background to your theme */
+    color: #ffffff;
+    text-align: center;
+}
+
+.resume-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #1cb1be;
+}
+
+.resume-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Spread the items evenly */
+    gap: 20px; /* Space between the cards */
+    padding: 50px 0 100px 0;
+}
+
+.resume-item {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgb(49, 235, 252);
+}
+
+.resume-item h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.view-btn,
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #1cb1be;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.view-btn:hover,
+.download-btn:hover {
+    background-color: #02e6ff;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .resume-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume-item {
+        width: 80%; /* Make the cards full width on smaller screens */
+        margin-bottom: 20px;
+    }
+}

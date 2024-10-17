@@ -1,0 +1,90 @@
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.55rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #121212;
+    width: 90.3%;
+}
+
+.navbar-brand {
+    color: #1cb1be;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: space-around; /* Keep links evenly spaced */
+    list-style: none;
+    width: 90%; /* Stretch links across the width */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.navbar-links a:hover {
+    color: #1cb1be;
+}
+
+/* Responsive navbar - small screens */
+@media (max-width: 768px) {
+    .navbar{
+        padding: 0.1rem;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-links {
+        display: none;
+        flex-direction: row;
+        background-color: #121212; /* Background for dropdown */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+    .navbar-links.open {
+        display: flex;
+    }
+    .navbar-links.open a{
+        padding-right: 20px;
+
+    }
+}
+
+/* Very Small Screens (below 576px) */
+@media (max-width: 576px) {
+    .navbar-links {
+        justify-content: center; /* Center the links */
+        text-align: center; /* Align text */
+    }
+
+    .navbar-links a {
+        padding: 1rem 0; /* Give more padding for links */
+        font-size: 1.2rem; /* Increase font size for better readability */
+    }
+
+    .navbar {
+        padding-left: 0.1rem; /* Reduce padding on smaller screens */
+        padding-right: 0.1rem;
+        padding-bottom: 2rem;
+    }
+}

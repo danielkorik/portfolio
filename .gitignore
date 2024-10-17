@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
@@ -21,3 +19,24 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Firebase cache and config files
+.firebase/
+.firebaserc
+
+# Local environment variables (for any environment)
+/.env
+
+# IDE and editor settings
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+
+# Windows-specific files
+Thumbs.db
+
+# Parcel-bundler cache (if you're using it)
+.cache/
