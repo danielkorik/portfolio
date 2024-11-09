@@ -58,7 +58,18 @@
 .highlight:hover {
     text-decoration: underline;
 }
+/* Responsive Design */
+@media (max-width: 1080px) {
+    .about-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .about-box {
+        flex-basis: 100%; /* Full width on small screens */
+    }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .about-content {

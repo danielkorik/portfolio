@@ -23,20 +23,22 @@
 }
 
 .image-container {
-    flex-basis: 40%; /* Image takes 40% of the width */
+    flex-basis: 50%; /* Image takes 40% of the width */
     flex-shrink: 0; /* Prevents shrinking */
-    max-width: 100%; /* Ensure image container doesn’t exceed its parent */
+    max-width: 90%; /* Prevents image from growing too large on bigger screens */
 }
 
 .home-img {
-    width: 100%; /* Ensure image scales with container */
+    width: 60%; /* Ensure image scales with container */
     height: auto; /* Maintain aspect ratio */
+    max-width: 500px; /* Limit image width */
     opacity: 0.9;
     filter: grayscale(100%); /* Optional for monochrome effect */
 }
 
+/* Text Content */
 .text-content {
-    flex-basis: 50%; /* Text takes 50% of the width */
+    flex-basis: 40%; /* Text takes 50% of the width */
     color: #ffffff;
     padding-left: 30px; /* Adjust padding to prevent overflow */
     word-wrap: break-word; /* Ensure long words wrap properly */
@@ -78,27 +80,26 @@
 
 /* Media query for small screens */
 @media (max-width: 768px) {
-    .home-section {
-        flex-direction: column; /* Stack content vertically */
-        height: 80.5vh; /* Let the height be auto for small screens */
-        text-align: center; /* Center-align content */
-    }
 
-    .image-container,
-    .text-content {
+
+    .image-container{
         align-items: center;
-        flex-basis: 90%; /* Full width for text and image */
+        flex-basis: 40%; /* Full width for text and image */
         max-width: 90%; /* Ensure no overflow */
     }
 
     .text-content {
         padding-left: 1rem;
+        align-items: center;
+        flex-basis: 50%; /* Full width for text and image */
+        max-width: 90%; /* Ensure no overflow */
+
     }
 
     .home-img {
         padding-left: 20px;
-        width: 40%; /* Control image width for mobile */
-        height: 30vh; /* Maintain aspect ratio */
+        width: 80%; /* Adjust image size for small screens */
+        height: auto; /* Maintain aspect ratio */
     }
 
     /* Reduce font sizes for smaller screens */
@@ -118,28 +119,37 @@
 /* Very Small Screens (Small mobile devices, less than 576px) */
 @media (max-width: 576px) {
 
-    .home-section {
-        flex-direction: column; /* Stack content vertically */
-        height: 83.5vh; /* Let the height be auto for small screens */
-        text-align: center; /* Center-align content */
+
+    .image-container{
+        align-items: center;
+        flex-basis: 40%; /* Full width for text and image */
+        max-width: 90%; /* Ensure no overflow */
     }
+
     .text-content {
-        padding-top: 10px;
+        padding-left: 1rem;
+        align-items: center;
+        flex-basis: 50%; /* Full width for text and image */
+        max-width: 90%; /* Ensure no overflow */
+
     }
+
+    .home-img {
+        padding-left: 20px;
+        width: 80%; /* Adjust image size for small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Reduce font sizes for smaller screens */
     .text-content h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .text-content h2 {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 
     .text-content p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
-    .home-img {
-        width: 40%; /* Control image width for mobile */
-        height: 40vh; /* Maintain aspect ratio */
-    }
-
 }
