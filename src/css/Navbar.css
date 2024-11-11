@@ -9,7 +9,7 @@
     z-index: 1000; /* Ensure navbar stays on top of other content */
     background-color: #121212;
     width: 90.3%;
-    transition: background-color 0.3s ease; /* Smooth background transition */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar-brand {
