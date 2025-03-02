@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Resume from './components/Resume';
 import './css/Navbar.css';
 import './App.css';
+import ScreenshotsPage from "./components/ScreenshotsPage";
 
 const App = () => {
     return (
@@ -21,6 +22,7 @@ const App = () => {
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/resume" element={<Resume/>} />
+                    <Route path="/screenshots" element={<ScreenshotsPage />} />
                 </Routes>
                 {/* Add the floating resume button */}
                 <a href="/resume" className="resume-float-btn">

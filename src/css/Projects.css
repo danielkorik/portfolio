@@ -4,6 +4,7 @@
     background-color: #121212;
     color: #ffffff;
 }
+
 /* Spinner styles */
 .spinner-container {
     display: flex;
@@ -59,12 +60,14 @@
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
-.project-card  p {
+
+.project-card p {
     font-size: 1rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
 }
-.project-card  a {
+
+.project-card a {
     text-decoration: none;
 }
 
@@ -85,20 +88,94 @@
     }
 }
 
-
 .project-card:nth-child(1) {
     animation-delay: 0.4s;
 }
+
 .project-card:nth-child(2) {
     animation-delay: 0.6s;
 }
+
 .project-card:nth-child(3) {
     animation-delay: 0.8s;
 }
+
 .project-card:nth-child(4) {
     animation-delay: 1s;
 }
+
 .project-card:nth-child(5) {
     animation-delay: 1.2s;
 }
 
+/* Screenshots Container */
+.screenshots-container {
+    margin-top: 1rem;
+}
+
+.screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust the size of the screenshots */
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.screenshot {
+    width: 100%; /* Ensure the screenshot fits within the card */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.screenshot:hover {
+    transform: scale(1.05);
+}
+
+/* Link Buttons */
+.project-links {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 0.5rem; /* Space between buttons */
+    margin-top: 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #1cb1be; /* Button background color */
+    color: #ffffff; /* Button text color */
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.project-link:hover {
+    background-color: #343232; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    color: #03e4f8;
+}
+.view-screenshots-button {
+    display: inline-block; /* Match the GitHub button */
+    padding: 0.5rem 1rem; /* Match the GitHub button */
+    background-color: #1cb1be; /* Match the GitHub button */
+    color: #ffffff; /* Match the GitHub button */
+    text-align: center; /* Match the GitHub button */
+    border-radius: 5px; /* Match the GitHub button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Match the GitHub button */
+    text-decoration: none; /* Match the GitHub button */
+    font-size: 0.9rem; /* Match the GitHub button */
+    margin-top: 0.5rem; /* Optional: Add margin if needed */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Add pointer cursor for better UX */
+    font-family: inherit; /* Ensure font matches the rest of the page */
+    width: 100%; /* Ensure the button takes the full width of its container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.view-screenshots-button:hover {
+    background-color: #343232; /* Match the GitHub button hover effect */
+    transform: translateY(-2px); /* Match the GitHub button hover effect */
+    color: #03e4f8; /* Match the GitHub button hover effect */
+}

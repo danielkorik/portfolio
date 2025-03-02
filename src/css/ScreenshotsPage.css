@@ -1,0 +1,45 @@
+.screenshots-page {
+    padding: 2rem;
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center;
+}
+
+.screenshots-page h2 {
+    font-size: 2rem;
+    color: #1cb1be;
+    margin-bottom: 1.5rem;
+}
+
+.screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.screenshot {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.screenshot:hover {
+    transform: scale(1.05);
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #1cb1be;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1499a3;
+}
